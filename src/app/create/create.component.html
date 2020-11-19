@@ -1,0 +1,12 @@
+
+<form [formGroup] = "formData" (ngSubmit) = "onSubmit(formData.value)">
+  <input type = "text" name = "name" formControlName = "name" placeholder="Name">
+  <br><br>
+  <input type = "text" name = "dob" formControlName = "dob" placeholder="Date of Birth">
+  <br><br>
+  <input type = "text" name = "phoneNumber" formControlName = "phoneNumber" placeholder="Phone Number">
+  <br><br>
+  <input type = "text" name = "emailAddress" formControlName = "emailAddress" placeholder = "Email Address">
+  <br><br>
+  <input type = "submit" [disabled] = "!formData.valid" value = "Create User">
+</form>
